@@ -527,7 +527,7 @@ Bảng điểm thô ở Mục 2 đo độ thuận lợi chuyên môn. Để ch�
 
 ### 10.4. Phạm vi pilot chuyên môn
 
-**Tập mẫu đề xuất:** 12 exact models/SKUs, chia 4 nhóm use case (3 model mỗi nhóm):
+**Tập mẫu đề xuất:** 12 exact manufacturer model codes, được gắn nhiều nhãn use case. Đây là shortlist để nghiên cứu, chưa xác nhận P/N, SKU của nhà bán, tồn kho, giá hoặc phân phối tại Việt Nam.
 
 - Office / study: đọc văn bản, làm việc nhiều giờ, ergonomics, flicker/clarity, kết nối cơ bản.
 - Productivity / USB-C: docking, USB-C video, power delivery, hub, KVM và tương thích hệ điều hành.
@@ -557,7 +557,7 @@ Trâm Anh có thể thu thập model codes, P/N, region, manual/spec links, ngà
 
 ### 10.6. Điều kiện hoàn thành pilot
 
-1. Có 12 exact model identity records; mọi bản ghi unresolved bị loại khỏi bảng so sánh công khai.
+1. Có 12 exact manufacturer model identity records; P/N, region, offer và bảo hành được xác minh riêng; mọi bản ghi unresolved bị loại khỏi bảng so sánh công khai.
 2. Mỗi tiêu chí quan trọng có định nghĩa, đơn vị, điều kiện so sánh và nguồn.
 3. Mọi claim HDR/refresh/response/color có trạng thái verified, partial hoặc unresolved.
 4. Có ma trận tối thiểu cho 4 use case và danh sách hard constraints / trade-offs.
@@ -574,3 +574,35 @@ Trâm Anh có thể thu thập model codes, P/N, region, manual/spec links, ngà
 - Kinh tế đơn vị và mức độ cạnh tranh với publisher/reviewer hiện có.
 
 Các mục trên nằm ngoài quyền xác nhận chuyên môn của A Long. **Khuyến nghị với CEO:** cho phép dùng màn hình làm pilot kiến thức 12 SKU trong khi kiểm chứng song song demand, data permissions và affiliate feasibility. Chỉ chốt MVP sau khi các cổng đó đạt yêu cầu.
+
+
+### 10.8. Danh sách 12 model mẫu và bằng chứng sơ cấp
+
+Các thông số dưới đây là dữ kiện **do nhà sản xuất công bố**, không phải kết quả đo độc lập hoặc khẳng định model hiện còn được bán tại Việt Nam. Các thông số kỹ thuật phải được tải lại theo đúng region/SKU trước khi xuất bản.
+
+| ID | Exact model code | Nhóm use case | Thông số định danh/claim hãng công bố (tóm tắt) | Nguồn hãng |
+|---|---|---|---|---|
+| MON-01 | BenQ GW2790Q | Office / study | 27", IPS, QHD, 100Hz, 99% sRGB; trang thông số phân biệt 5ms GtG và 1ms MPRT | https://www.benq.com/vi-vn/monitor/home/gw2790q/spec.html |
+| MON-02 | BenQ EW270Q | Office / everyday gaming | 27", IPS, QHD, 200Hz, 90% P3 theo trang hãng | https://www.benq.com/vi-vn/monitor/home/ew270q/spec.html |
+| MON-03 | ASUS ProArt PA278QV | Office / creator entry | 27", QHD IPS, 75Hz, 100% sRGB, hãng công bố Delta E <2 và Calman Verified | https://www.asus.com/vn/displays-desktops/monitors/proart/proart-display-pa278qv/techspec/ |
+| MON-04 | ASUS ProArt PA278QGV | Office / creator | 27", QHD IPS, 120Hz, 100% sRGB, 95% DCI-P3, hãng công bố Delta E <2 | https://www.asus.com/vn/displays-desktops/monitors/proart/proart-display-pa278qv-gen2-pa278qgv/techspec/ |
+| MON-05 | BenQ MA270U | USB-C productivity / Mac workflow | 27", 4K IPS, 60Hz, 99% sRGB, 95% P3, USB-C PD 90W, VESA DisplayHDR 400 claim | https://www.benq.com/vi-vn/monitor/home/ma270u/spec.html |
+| MON-06 | ASUS ProArt PA278CV | USB-C productivity / creator | 27", QHD IPS, 75Hz, 100% sRGB, hãng công bố Delta E <2, USB-C PD 65W | https://www.asus.com/vn/displays-desktops/monitors/proart/proart-display-pa278cv/techspec/ |
+| MON-07 | ASUS ProArt PA279CRV | USB-C productivity / color work | 27", 4K IPS, 60Hz, hãng công bố 99% DCI-P3, 99% Adobe RGB, Delta E <2, USB-C PD 96W, VESA DisplayHDR 400 | https://www.asus.com/vn/displays-desktops/monitors/proart/proart-display-pa279crv/techspec/ |
+| MON-08 | LG 27UP850K-W | USB-C productivity / photo-video | 27", 4K IPS, 60Hz, DCI-P3 95% typ., USB-C PD up to 96W, VESA DisplayHDR 400 claim | https://www.lg.com/vn/man-hinh-may-tinh/man-hinh-do-hoa-ultrafine/27up850k-w/ |
+| MON-09 | LG 27GS85Q-B | Gaming / motion | 27", QHD Nano IPS, 180Hz native, 200Hz overclocked, 1ms GtG claim, DisplayHDR 400 claim | https://www.lg.com/vn/man-hinh-may-tinh/man-hinh-gaming-ultragear/27gs85q-b/ |
+| MON-10 | ASUS TUF Gaming VG27AQ3A | Gaming / motion | 27", QHD Fast IPS, 180Hz max, 1ms GtG claim, HDR10 signal support | https://www.asus.com/vn/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg27aq3a/techspec/ |
+| MON-11 | MSI G274QPF E2 | Gaming / motion | QHD up to 180Hz via DP and up to 144Hz via HDMI; Type-C DP Alt with 15W PD; hãng công bố 1ms GtG | https://www.msi.com/Monitor/G274QPF-E2/Specification |
+| MON-12 | MSI MAG 274QRF QD E2 | Gaming / color/gamut | QHD gaming model; DP 1.4a, HDMI 2.0b, USB-C DP Alt; exact refresh/response and gamut must be taken from full current spec and checked per port | https://vn.msi.com/Monitor/MAG-274QRF-QD-E2/Specification |
+
+**Cách phân nhóm để test:**  
+- Office/study: MON-01, MON-02, MON-03, MON-04.  
+- USB-C productivity: MON-05, MON-06, MON-07, MON-08.  
+- Design/color work: MON-03, MON-05, MON-06, MON-07, MON-08.  
+- Gaming: MON-02, MON-09, MON-10, MON-11, MON-12.
+
+Các nhóm use case cố ý giao nhau; đây là bộ test nhiều nhãn chứ không phải bốn nhóm SKU tách biệt.
+
+**Trường đang để pending trước khi chốt catalog:** manufacturer P/N; market region; exact panel/revision; firmware; nguồn bán tại Việt Nam; tình trạng bảo hành; giá/stock; quyền sử dụng dữ liệu; link offer/affiliate. Không điền giá hoặc availability trong Product Expert Knowledge Base.
+
+**Cảnh báo so sánh:** các thông số “1ms” trên bảng này không cùng một phép đo mặc định; MON-01 còn công bố riêng 5ms GtG và 1ms MPRT. Refresh rate theo cổng cũng có thể khác nhau (ví dụ MON-11), còn LG 27GS85Q-B phân biệt 180Hz native với 200Hz O/C. Vì vậy mọi so sánh phải lưu method, setting, input port và condition thay vì xếp hạng trực tiếp từ headline claim.
