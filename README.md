@@ -65,3 +65,10 @@ Mọi đề xuất mở rộng hoặc thay đổi lớn cần trả lời:
 5. Có thể kiểm thử nhỏ trước khi đầu tư lớn không?
 
 Không thêm tính năng chỉ vì công nghệ cho phép.
+
+
+## Điều phối công việc
+
+- [Work Management Workflow](docs/WORKFLOW.md) — quy trình giao, nhận, thực hiện, bàn giao và nghiệm thu.
+- [Team Workspace](team/README.md) — vai trò và task inbox của từng nhân sự.
+- [Task Issue Template](.github/ISSUE_TEMPLATE/task.md) — mẫu giao việc thống nhất.
