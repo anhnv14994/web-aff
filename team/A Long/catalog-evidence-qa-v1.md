@@ -157,7 +157,7 @@ Ngày truy cập các trang dưới đây: **12/11/2026**. “Manufacturer-claim
 | Field | Giá trị được nguồn công bố | Evidence / status | Giới hạn |
 |---|---|---|---|
 | Generation | Product support Bose ghi QuietComfort Ultra Headphones bán từ 2023; Bose phân biệt đời 1 với 2nd Gen bán từ 2025 | E-A05 / verified | Catalog phải ghi “1st Gen / 2023”; không rút gọn thành QuietComfort Ultra nếu có cả đời 2 |
-| Product name / SKU | Product name chính hãng: QuietComfort Ultra Headphones; Bose Support product page (sold from 2023) | E-A05 / verified for family only | Không coi family ID là retail P/N; SKU màu/region vẫn pending |
+| Product name / SKU | Product name chính hãng: QuietComfort Ultra Headphones; Bose Support product page (sold from 2023) | E-A05 / verified for family only | Không coi product name/support page là retail P/N; SKU màu/region vẫn pending |
 | Wireless | Bluetooth 5.3; profiles A2DP/HFP/AVRCP/BLE; Snapdragon Sound listed | E-A06 / manufacturer-claimed | Giữ riêng aptX Adaptive/codec claims theo tài liệu hỗ trợ cụ thể; không suy codec từ Snapdragon Sound |
 | Battery | Tối đa 24h Immersive Audio off; tối đa 18h Immersive Audio on; charge time đến 3h | E-A07 / manufacturer-claimed | Đây là claim đời 1; không thay bằng thông số đời 2 (30h, BT 5.4) |
 | Wired audio / port | Gen 1: USB-C charging; Bose product support ghi không hỗ trợ USB audio | E-A06 / manufacturer-claimed | Đời 2 có USB-C wired lossless audio; không gán tính năng này cho Gen 1 |
