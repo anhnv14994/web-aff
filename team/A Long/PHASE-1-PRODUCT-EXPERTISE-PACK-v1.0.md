@@ -94,7 +94,7 @@ Công thức: tổng điểm = tổng (điểm tiêu chí × trọng số). Khô
 **Model mapping bắt buộc:** model code chính xác, generation, loại tai nghe, phiên bản thị trường, màu, phụ kiện/ear tips, firmware tại thời điểm thử và SKU bán lẻ nếu khác nhau.
 
 **Nguồn khởi tạo**
-- Sony Việt Nam — WF-1000XM5 specifications: https://www.sony.com.vn/electronics/support/wireless-headphones-bluetooth-headphones/wf-1000xm5/specifications
+- Sony Việt Nam — WF-1000XM5 specifications: https://store.sony.com.vn/blogs/7131345551419_41237784395835/7131345551419_specifications
 - RTINGS — How We Test Headphones: https://www.rtings.com/headphones/learn/how-we-test
 - RTINGS — Raw Frequency Response: https://www.rtings.com/headphones/tests/sound-quality/raw-frequency-response
 
@@ -132,7 +132,7 @@ Công thức: tổng điểm = tổng (điểm tiêu chí × trọng số). Khô
 **Nguồn khởi tạo**
 - ASUS Việt Nam — Zenbook 14 OLED UX3405 Tech Specs: https://www.asus.com/vn/laptops/for-home/zenbook/asus-zenbook-14-oled-ux3405/techspec/
 - ASUS Việt Nam — UX3405 Where to Buy / P/N: https://www.asus.com/vn/laptops/for-home/zenbook/asus-zenbook-14-oled-ux3405/where-to-buy/
-- Intel — Laptop Processor Comparison Chart (reviewed 05/11/2026): https://www.intel.com/content/www/us/en/support/articles/000028083/processors.html
+- Intel — Laptop Processor Comparison Chart: https://www.intel.com/content/www/us/en/support/articles/000028083/processors.html
 - Intel ARK Việt Nam: https://www.intel.vn/content/www/vn/vi/ark.html
 
 ### 3.3. Màn hình máy tính
@@ -236,7 +236,7 @@ Công thức: tổng điểm = tổng (điểm tiêu chí × trọng số). Khô
 - AHAM — Air Filtration Standards / CADR: https://ahamverifide.org/ahams-air-filtration-standards/
 - AHAM Verifide — Certified Room Air Cleaner Directory (mô hình được kiểm tra độc lập; danh sách cập nhật liên tục): https://ahamverifide.org/directory-of-air-cleaners/
 - Xiaomi Việt Nam — CADR explainer: https://www.mi.com/vn/support/article/KA-10416/
-- Electrolux Việt Nam — Air Purifier Buying Guide: https://www.electrolux.vn/en-vn/buying-guides/air-purifiers-buying-guide/
+- Electrolux Việt Nam — Buying Guides (directory includes Air Purifier Buying Guide): https://www.electrolux.vn/en-vn/buying-guides/
 - AHAM — consumer selection guide: https://blog.aham.org/how-to-choose-the-best-air-cleaner-for-your-home/
 
 **Giới hạn chuẩn quốc tế:** hướng dẫn diện tích/CADR của AHAM có giả định riêng (ví dụ chiều cao trần và rule-of-thumb theo diện tích). Không chuyển nguyên xi thành ngưỡng bắt buộc cho nhà ở Việt Nam; cần ghi rõ điều kiện và có thể quy đổi theo ACH/chiều cao phòng đã xác định.
