@@ -30,16 +30,18 @@ Website không chỉ liệt kê sản phẩm hoặc so sánh giá. A+ giúp khá
 2. **Customer Decision Engine:** hiểu nhu cầu, hỏi tối thiểu, lọc/xếp hạng theo độ phù hợp, giải thích ưu nhược điểm và đánh đổi.
 3. **Affiliate & Growth Engine:** trang sản phẩm/so sánh, SEO và AI retrievability, clickout tracking, đối soát hoa hồng và đo hiệu quả.
 
-## Nhóm năng lực
+## Nhóm năng lực và tổ chức nhân sự
 
-- Customer Psychology & Decision Science — Vân Anh.
-- Product Expertise — chuyên gia ngành hàng.
-- Product & Market Intelligence — dữ liệu sản phẩm, thị trường, nguồn bán.
-- Affiliate Business — đối tác, tracking, điều kiện ghi nhận và đối soát.
-- SEO/GEO & Growth — phân phối, khả năng truy xuất, đo lường.
-- Product Engineering & Analytics — hệ thống, tự động hóa, kiểm thử và phân tích.
+- **CEO:** chiến lược, product ownership, ưu tiên, quyết định và điều phối.
+- **Vân Anh:** Customer Psychology & Decision Science.
+- **Product Expertise:** chuyên gia ngành hàng, ưu tiên cộng tác sau khi chốt MVP.
+- **Product Engineering & Automation:** Technical Lead / Full-stack Automation Engineer.
+- **Product & Market Intelligence:** dữ liệu sản phẩm, thị trường, nguồn bán và chất lượng dữ liệu.
+- **Affiliate Business:** đối tác, tracking, điều kiện ghi nhận và đối soát.
+- **SEO/GEO & Growth:** phân phối, khả năng truy xuất và đo lường.
+- **QA:** kiểm định chéo, chưa cần tuyển riêng ở giai đoạn MVP.
 
-Một người có thể kiêm nhiều nhóm ở giai đoạn đầu. Đây là các **năng lực cần có**, không phải yêu cầu tuyển đủ sáu nhân sự.
+Không tuyển đủ mọi vai trò ngay từ đầu. Cơ cấu gọn đề xuất: CEO + Vân Anh + Product Expert cộng tác + một Technical Lead; CEO/Engineering kiêm Data và Affiliate Operations trước, SEO/GEO thuê part-time theo milestone. Đây là các **năng lực cần có**, không phải yêu cầu tuyển đủ từng vị trí.
 
 ## Trạng thái quyết định
 
