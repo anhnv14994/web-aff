@@ -59,7 +59,7 @@ Một field có thể có đồng thời hai dòng evidence: ví dụ “manufac
 |---|---|---|---|---|---|
 | AUD-01 | **Sony WH-1000XM5** | Dòng XM5, ra mắt giữa năm 2022 theo hồ sơ test độc lập; không gộp WH-1000XM4 hoặc XM6. | Manufacturer model: WH-1000XM5 | verified | pending — màu/retail package code chưa được chốt trong pilot |
 | AUD-02 | **Sennheiser MOMENTUM 4 Wireless** | Generation M4; trang Việt Nam ghi các SKU màu: Black 509266, White 509267, Graphite 700383. Trang Support còn liệt kê Brown 800074, Teal 800073, Copper 800108, Denim 800109. | SKU color-specific do Sennheiser công bố | verified | verified đối với các SKU màu trên trang hãng; vẫn pending đối với P/N/offer của từng retailer Việt Nam |
-| AUD-03 | **Bose QuietComfort Ultra Headphones (1st Gen / đời 2023)** | Bose Support ghi sản phẩm bán từ 2023; Bose phân biệt rõ đời 1 với QuietComfort Ultra Headphones (2nd Gen) bán từ 2025. Trong catalog phải giữ tên đời 1 rõ ràng. | Product family/support identifier QCUH-HEADPHONEARN xuất hiện trong Bose product assets; không coi mã family này là retail P/N | verified cho generation; pending cho P/N màu/thị trường | pending |
+| AUD-03 | **Bose QuietComfort Ultra Headphones (1st Gen / đời 2023)** | Bose Support ghi sản phẩm bán từ 2023; Bose phân biệt rõ đời 1 với QuietComfort Ultra Headphones (2nd Gen) bán từ 2025. Trong catalog phải giữ tên đời 1 rõ ràng. | Product name trên trang Bose Support; trang đã kiểm tra không công bố exact retail P/N | verified cho generation; pending cho P/N màu/thị trường | pending |
 | AUD-04 | **JBL Tour One M2** | Dòng Tour One, model M2; không gộp Tour One M3 hoặc Tour Pro earbuds. | JBL Item# **JBLTOURONEM2BAM** được xác nhận cho biến thể đen trên JBL.com | verified cho model + Item# biến thể đen | pending đối với màu/retailer SKU khác và Vietnam warranty P/N |
 | AUD-05 | **Apple AirPods Max 1 (USB-C)** | Đời 1 USB-C ra mắt 2024; model number **A3184**. Phân biệt AirPods Max 1 Lightning **A2096** (2020) và AirPods Max 2 **A3454** (2026). | Manufacturer model number A3184 | verified | pending — cần nhà bán xác nhận part/region SKU; không lấy mã Lightning |
 
@@ -68,7 +68,7 @@ Một field có thể có đồng thời hai dòng evidence: ví dụ “manufac
 - Nếu chỉ biết “PA279CRV”/“WH-1000XM5” nhưng offer ghi tên chung, không được tự điền suffix, màu hoặc region.
 - SKU màu Sennheiser và Item# JBL là mã product/variant chính hãng, không phải bằng chứng SKU đang được một retailer Việt Nam bán.
 - Apple A3184 là model number của tai nghe, không phải số serial và không phải mã offer.
-- Bose product family identifier không thay thế serial/model/retail part number. Nếu không đọc được nhãn trên tai nghe/hộp hoặc part number chính hãng, giữ retail P/N pending.
+- Bose product name/generation evidence không thay thế exact retail part number. Nếu không đọc được nhãn trên tai nghe/hộp hoặc part number chính hãng, giữ retail P/N pending.
 - Canonical model và Retail Offer phải là hai record khác nhau.
 
 ## 4. Evidence register theo thuộc tính
@@ -157,7 +157,7 @@ Ngày truy cập các trang dưới đây: **12/11/2026**. “Manufacturer-claim
 | Field | Giá trị được nguồn công bố | Evidence / status | Giới hạn |
 |---|---|---|---|
 | Generation | Product support Bose ghi QuietComfort Ultra Headphones bán từ 2023; Bose phân biệt đời 1 với 2nd Gen bán từ 2025 | E-A05 / verified | Catalog phải ghi “1st Gen / 2023”; không rút gọn thành QuietComfort Ultra nếu có cả đời 2 |
-| Product name / SKU | Product name chính hãng: QuietComfort Ultra Headphones; support family ID QCUH-HEADPHONEARN | E-A05 / verified for family only | Không coi family ID là retail P/N; SKU màu/region vẫn pending |
+| Product name / SKU | Product name chính hãng: QuietComfort Ultra Headphones; Bose Support product page (sold from 2023) | E-A05 / verified for family only | Không coi family ID là retail P/N; SKU màu/region vẫn pending |
 | Wireless | Bluetooth 5.3; profiles A2DP/HFP/AVRCP/BLE; Snapdragon Sound listed | E-A06 / manufacturer-claimed | Giữ riêng aptX Adaptive/codec claims theo tài liệu hỗ trợ cụ thể; không suy codec từ Snapdragon Sound |
 | Battery | Tối đa 24h Immersive Audio off; tối đa 18h Immersive Audio on; charge time đến 3h | E-A07 / manufacturer-claimed | Đây là claim đời 1; không thay bằng thông số đời 2 (30h, BT 5.4) |
 | Wired audio / port | Gen 1: USB-C charging; Bose product support ghi không hỗ trợ USB audio | E-A06 / manufacturer-claimed | Đời 2 có USB-C wired lossless audio; không gán tính năng này cho Gen 1 |
@@ -327,7 +327,7 @@ Mỗi canonical model nên có record riêng, mỗi attribute có evidence riên
 ## 10. Kết luận chuyên môn của A Long
 
 - **10/10 canonical model** hiện đã có định danh chính hãng đủ để tránh gộp nhầm model/generation ở tầng model name. Riêng retail P/N/SKU và local market mapping còn pending đúng phạm vi.
-- **7/10 model** có nguồn hãng trực tiếp với các thuộc tính chính đã ghi trong evidence register; Sennheiser, Bose và Apple đã bổ sung những khoảng trống identity/generation quan trọng. Các field phụ không có nguồn vẫn là pending.
+- **10/10 model** có nguồn hãng trực tiếp cho định danh và/hoặc các thuộc tính cốt lõi trong evidence register. Sennheiser, Bose, JBL và Apple đã bổ sung những khoảng trống identity/generation quan trọng. Một số field phụ và toàn bộ retail P/N/local offer chưa có nguồn đủ rõ nên vẫn pending.
 - Independent evidence hiện có cho **4 model**: PA279CRV, WH-1000XM5, MOMENTUM 4 Wireless và Bose QuietComfort Ultra đời 1. Các kết quả test chỉ áp dụng đúng model/sample/test bench nêu ở trên.
 - Có **1 nhóm field cần giữ conflicting-scope**: JBL Tour One M2 microphone count/“4-mic technology”. Không tự chọn một giá trị.
 - Các thông số marketing dễ gây sai nhất đã được chuyển thành test: O/C refresh, GtG/MPRT, port-specific refresh, gamut vs accuracy, USB-C PD vs video/data, generation naming, codec compatibility và test inheritance.
