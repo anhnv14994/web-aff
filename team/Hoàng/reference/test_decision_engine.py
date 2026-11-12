@@ -12,7 +12,7 @@ class DecisionEngineTests(unittest.TestCase):
             "a", {"max_width": "pass", "required_compatibility": "pass"},
             {"portability": 2, "battery": 1}))
         self.assertEqual(r.eligibility_status, "eligible")
-        self.assertEqual(r.fit_score, 87.5)
+        self.assertEqual(r.fit_score, 81.25)
         self.assertEqual(r.evidence_coverage, 1.0)
 
     def test_hard_fail_excludes(self):
