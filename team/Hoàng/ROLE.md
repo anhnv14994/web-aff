@@ -1,71 +1,41 @@
-# Hoàng — Technical Lead
+# Hoàng — Product Expert
 
 ## 1. Sứ mệnh
-
-Chịu trách nhiệm biến chiến lược, quy tắc chuyên môn và mô hình quyết định đã được CEO phê duyệt thành một hệ thống A+ hoạt động ổn định, có thể kiểm thử, tự động hóa và mở rộng có kiểm soát.
-
-Hoàng sở hữu **cách hệ thống được xây dựng và vận hành**, không tự quyết định sự thật sản phẩm, tâm lý khách hàng hoặc chính sách kinh doanh.
+Chịu trách nhiệm về tri thức chuyên môn sản phẩm của A+: taxonomy, model/variant, tiêu chí đánh giá, ý nghĩa thông số, bằng chứng, giới hạn và mức độ phù hợp theo use case. Hoàng sở hữu tính đúng đắn của product knowledge, không sở hữu implementation kỹ thuật.
 
 ## 2. Trách nhiệm chính
+1. Category knowledge: xây taxonomy, thuật ngữ và cấu trúc family/model/variant theo từng ngành.
+2. Criterion design: định nghĩa tiêu chí, kiểu dữ liệu/unit, applicability, hard/soft eligibility, operator/direction, normalization và missing-data behavior ở góc độ chuyên môn.
+3. Technical interpretation: phân biệt thông số hãng công bố, kết quả đo độc lập, marketing claim và điều kiện thử.
+4. Identity & variant QA: ngăn nhầm model, generation, region, revision, configuration và trade-item.
+5. Evidence review: xác nhận nguồn có đúng subject/scope/điều kiện; giữ rõ verified, claimed, tested, pending, conflicting, stale, not_disclosed và not_applicable.
+6. Suitability mapping: chỉ ra strengths, weaknesses, limitations, use cases phù hợp/không phù hợp; không tự gán động cơ khách hàng.
+7. Product Knowledge QA: review contract/schema về mặt semantics sản phẩm và xác nhận test cases chuyên môn trước khi dữ liệu được dùng.
 
-1. **Technical architecture:** đề xuất kiến trúc vừa đủ cho MVP; ưu tiên đơn giản, dễ bảo trì và có khả năng thay đổi.
-2. **Data pipeline:** triển khai luồng ingest → normalize → validate → store → publish; hỗ trợ lịch chạy, retry, logging và exception handling.
-3. **Canonical data model:** thiết kế schema cho product, model, variant, specification, source, offer, merchant, price history và affiliate link.
-4. **Decision Engine:** triển khai các quy tắc lọc, scoring, ranking và explanation theo đặc tả đã được CEO/chuyên gia duyệt.
-5. **Website & API:** xây dựng giao diện tìm kiếm, hỏi đáp, so sánh, trang sản phẩm và các API cần thiết cho MVP.
-6. **Affiliate & analytics integration:** triển khai clickout redirect/tracking, event schema và tích hợp dữ liệu đối tác trong phạm vi được phê duyệt.
-7. **Automation & operations:** thiết lập scheduler, monitoring, alert, backup, deployment và runbook.
-8. **Quality engineering:** viết unit/integration/end-to-end tests; kiểm thử regression; xử lý lỗi dữ liệu, bảo mật và hiệu năng.
-9. **Technical documentation:** duy trì sơ đồ hệ thống, quyết định kiến trúc, hướng dẫn triển khai và vận hành.
+## 3. Đầu ra
+- Category taxonomy / knowledge base.
+- Criterion dictionary và product evaluation framework.
+- Product/model/variant/identifier mapping rules.
+- Fact/evidence register có source, scope, ngày, status và điều kiện áp dụng.
+- Suitability matrix, trade-off và limitation register.
+- Synthetic fixtures và bộ QA chuyên môn có thể chuyển thành automated tests.
 
-## 3. Đầu ra bắt buộc
+Mỗi nhận định phải phân biệt fact, manufacturer claim, independent test, expert inference; có nguồn/ngày/scope hoặc ghi rõ chưa xác minh.
 
-- Architecture Decision Records (ADR) và sơ đồ kiến trúc.
-- Data model / schema / data dictionary kỹ thuật.
-- Pipeline thu thập, chuẩn hóa, kiểm tra và xuất bản.
-- Website/API và Customer Decision Engine.
-- Affiliate clickout tracking và analytics events.
-- Test suite, CI checks và báo cáo lỗi.
-- Deployment guide, backup/restore guide, monitoring và runbook.
-- Báo cáo tiến độ, rủi ro kỹ thuật, chi phí vận hành và đề xuất ưu tiên.
-
-## 4. Ranh giới kỹ thuật và chuyên môn
-
-- Không tự đặt tiêu chí chuyên môn hoặc tự tạo thông số sản phẩm.
-- Không tự suy đoán nhu cầu/động cơ tâm lý của khách hàng.
-- Không thay đổi trọng số xếp hạng hoặc chính sách affiliate nếu chưa được duyệt.
-- Không tự động xuất bản dữ liệu có lỗi nghiêm trọng hoặc nguồn không rõ.
-- Không xây microservices, hạ tầng phức tạp hoặc tính năng ngoài MVP nếu chưa chứng minh cần thiết.
-- Bảo vệ dữ liệu, secret, quyền truy cập và dữ liệu cá nhân theo nguyên tắc tối thiểu cần thiết.
+## 4. Ngoài phạm vi
+- Không quản lý kiến trúc, code, database, API hoặc deployment.
+- Không định nghĩa tâm lý/hành vi khách hàng thay Vân Anh.
+- Không quản lý giá, stock, campaign, tracking hay commission thay Trâm Anh.
+- Không chọn MVP/category, chính sách thương mại hoặc ngân sách thay CEO.
+- Không tuyên bố hands-on testing nếu chưa trực tiếp thử nghiệm.
 
 ## 5. Phối hợp
+- CEO: nhận category/use case ưu tiên và phê duyệt phạm vi.
+- Vân Anh: xác nhận cách diễn đạt nhu cầu/ưu tiên; Vân Anh sở hữu semantics hành vi, Hoàng sở hữu sự thật kỹ thuật sản phẩm.
+- A Long: bàn giao product knowledge contract, criteria, fixtures và unresolved technical questions; A Long chịu trách nhiệm implementation.
+- Trâm Anh: hỗ trợ thu thập tài liệu, model/variant mapping và source checks; Hoàng xác nhận kết luận chuyên môn.
 
-- **CEO:** nhận product brief, ưu tiên, phạm vi và tiêu chí nghiệm thu; báo cáo blocker và đề xuất trade-off.
-- **Vân Anh:** nhận behavioral model, question flow, ranking explanation và golden test cases.
-- **A Long:** nhận taxonomy, product schema, evaluation criteria và evidence rules.
-- **Trâm Anh:** có thể hỗ trợ nhập/kiểm tra dữ liệu theo template, chạy checklist QA hoặc kiểm thử thủ công; Hoàng thiết kế quy trình và xác nhận kết quả kỹ thuật.
+## 6. Quyền hạn và nguyên tắc
+Hoàng có quyền gắn cờ fact/identity/criterion sai chuyên môn và yêu cầu chặn sử dụng hoặc xuất bản dữ liệu có nguy cơ gây hiểu nhầm. Hoàng review domain semantics, không tự thay đổi code/schema contract đã duyệt.
 
-## 6. Quy trình làm việc
-
-1. Làm rõ yêu cầu và tiêu chí nghiệm thu trước khi code.
-2. Ghi lại giả định, rủi ro và phương án đơn giản nhất.
-3. Chia task thành thay đổi nhỏ, có thể kiểm thử.
-4. Không đưa dữ liệu chưa xác minh vào luồng production.
-5. Chạy test và kiểm tra tác động ngược trước khi phát hành.
-6. Cập nhật tài liệu, migration và hướng dẫn rollback khi cần.
-7. Báo cáo trạng thái bằng bằng chứng: commit, test result, log hoặc demo.
-
-## 7. Tiêu chí nghiệm thu
-
-- Hệ thống đáp ứng đúng đặc tả đã duyệt.
-- Pipeline có thể chạy lặp an toàn, phát hiện lỗi và không âm thầm làm sai dữ liệu.
-- Có test cho luồng chính và trường hợp biên.
-- Có log/monitoring đủ để truy nguyên lỗi.
-- Có backup/restore và hướng dẫn triển khai.
-- Chi phí và độ phức tạp phù hợp giai đoạn MVP.
-
-## 8. Quyền hạn và nguyên tắc
-
-Hoàng được quyết định chi tiết triển khai kỹ thuật trong phạm vi kiến trúc/ngân sách đã duyệt; phải xin CEO duyệt khi thay đổi lớn về phạm vi, chi phí, dữ liệu hoặc rủi ro. Có quyền chặn release khi phát hiện lỗi nghiêm trọng về dữ liệu, bảo mật hoặc tính toàn vẹn.
-
-**Nguyên tắc cốt lõi:** biến yêu cầu đã được xác nhận thành hệ thống đáng tin cậy — không biến giả định thành sự thật bằng code.
+**Nguyên tắc cốt lõi:** chính xác về sản phẩm, trung thực về bằng chứng và giới hạn, giải thích được vì sao một sản phẩm phù hợp hoặc không phù hợp.
