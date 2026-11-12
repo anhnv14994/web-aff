@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/a-plus/decision-profile.schema.json",
+  "title": "A+ Decision Profile and Candidate Evaluation",
+  "description": "Draft contract aligned with journey J1-J6. No product-specific rules or commission fields.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/DecisionProfile"
+    },
+    {
+      "$ref": "#/$defs/CandidateEvaluation"
+    }
+  ],
+  "$defs": {
+    "ProvenancedValue": {
+      "type": "object",
+      "required": [
+        "value",
+        "evidence_source",
+        "confidence"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "null"
+          ]
+        },
+        "evidence_source": {
+          "type": "string",
+          "enum": [
+            "user_stated",
+            "observed",
+            "inferred_pending_confirmation",
+            "system_verified",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "Constraint": {
+      "type": "object",
+      "required": [
+        "key",
+        "constraint_type",
+        "expected_value",
+        "source"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constraint_type": {
+          "type": "string",
+          "enum": [
+            "hard",
+            "soft"
+          ]
+        },
+        "operator": {
+          "type": "string",
+          "enum": [
+            "equals",
+            "in",
+            "gte",
+            "lte",
+            "contains",
+            "compatible",
+            "custom"
+          ]
+        },
+        "expected_value": {
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "array",
+            "object",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "user_stated",
+            "observed",
+            "inferred_pending_confirmation"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        },
+        "decision_critical": {
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "Preference": {
+      "type": "object",
+      "required": [
+        "key",
+        "priority",
+        "source"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "priority": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 5
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "user_stated",
+            "observed",
+            "inferred_pending_confirmation"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unknown"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "DecisionProfile": {
+      "type": "object",
+      "required": [
+        "record_type",
+        "schema_version",
+        "session_id",
+        "journey_state",
+        "use_case",
+        "desired_outcomes",
+        "constraints",
+        "preferences",
+        "unresolved_slots"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "decision_profile"
+        },
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "journey_state": {
+          "type": "string",
+          "enum": [
+            "J1_UNCLEAR_NEED",
+            "J2_NEED_DEFINED",
+            "J3_EXPLORE_COMPARE",
+            "J4_HESITATING",
+            "J5_LEANING_NOT_CONFIDENT",
+            "J6_READY_TO_DECIDE"
+          ]
+        },
+        "use_case": {
+          "$ref": "#/$defs/ProvenancedValue"
+        },
+        "desired_outcomes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Constraint"
+          }
+        },
+        "preferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Preference"
+          }
+        },
+        "risk_concerns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "friction_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "asked_question_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "unresolved_slots": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "profile_version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CandidateEvaluation": {
+      "type": "object",
+      "required": [
+        "record_type",
+        "schema_version",
+        "candidate_id",
+        "hard_checks",
+        "fit_by_preference",
+        "evidence_refs"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "candidate_evaluation"
+        },
+        "schema_version": {
+          "type": "string",
+          "const": "1.0"
+        },
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hard_checks": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "unknown"
+            ]
+          }
+        },
+        "fit_by_preference": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "evidence_refs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "tradeoffs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "strengths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unknowns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evaluation_rule_version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
