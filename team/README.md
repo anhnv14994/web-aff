@@ -1,34 +1,25 @@
 # A+ — Team Workspace
 
-Thư mục này lưu mô tả vai trò, phạm vi trách nhiệm, đầu ra và nguyên tắc phối hợp của từng nhân sự. CEO dùng các tài liệu này làm căn cứ giao việc, nghiệm thu và cập nhật trách nhiệm.
+Đây là khu vực mô tả vai trò và điểm vào công việc của từng nhân sự.
 
 ## Nhân sự
+- [Vân Anh](./Vân%20Anh/ROLE.md) — Customer Psychology & Decision Science. [TASKS](./V%C3%A2n%20Anh/TASKS.md)
+- [A Long](./A%20Long/ROLE.md) — Product Expert. [TASKS](./A%20Long/TASKS.md)
+- [Hoàng](./Ho%C3%A0ng/ROLE.md) — Technical Lead. [TASKS](./Ho%C3%A0ng/TASKS.md)
+- [Trâm Anh](./Tr%C3%A2m%20Anh/ROLE.md) — Research & Operations Collaborator. [TASKS](./Tr%C3%A2m%20Anh/TASKS.md)
 
-- [Vân Anh](./Vân%20Anh/ROLE.md) — Customer Psychology & Decision Science.
-- [A Long](./A%20Long/ROLE.md) — Product Expert.
-- [Hoàng](./Hoàng/ROLE.md) — Technical Lead.
-- [Trâm Anh](./Trâm%20Anh/ROLE.md) — Research & Operations Collaborator.
+## Quy tắc giao việc
+1. GitHub Issues là nguồn sự thật duy nhất cho trạng thái và yêu cầu task.
+2. Mỗi task có đúng một DRI; người phối hợp và reviewer được ghi riêng.
+3. Nhân sự chủ động kiểm tra task được giao mỗi khi bắt đầu phiên làm việc và ít nhất một lần mỗi ngày làm việc khi đang có task hoạt động.
+4. Chỉ bắt đầu task ở trạng thái `status:ready`; xác nhận nhận việc bằng comment `CLAIMED`.
+5. Cập nhật tiến độ, blocker, câu hỏi và bàn giao ngay trong Issue.
+6. Chỉ CEO/người được ủy quyền nghiệm thu và đóng task.
+7. Không dùng chat riêng làm nơi lưu quyết định thay cho Issue.
 
-## Nguyên tắc giao việc
+## Tài liệu điều hành
+- [Work Management Workflow](../docs/WORKFLOW.md)
+- [Task Issue Template](../.github/ISSUE_TEMPLATE/task.md)
+- [Pull Request Template](../.github/pull_request_template.md)
 
-1. Mỗi task có một người chịu trách nhiệm chính (DRI).
-2. Giao đúng chuyên môn; người phối hợp không mặc nhiên chịu trách nhiệm nghiệm thu chuyên môn.
-3. Mọi đầu ra phải có bằng chứng/nguồn, giả thuyết được đánh dấu riêng, giới hạn và tiêu chí nghiệm thu.
-4. Nhân sự đề xuất; CEO quyết định ưu tiên, phạm vi và phê duyệt thay đổi quan trọng.
-5. Không tự ý thay đổi mục tiêu A+, nguyên tắc xếp hạng, chính sách dữ liệu hoặc phạm vi MVP.
-6. Không tự tạo dữ kiện, không che giấu điểm chưa chắc chắn và không tối ưu hoa hồng bằng cách làm sai lệch mức độ phù hợp.
-
-## Mẫu giao việc
-
-- **Task / Mục tiêu**
-- **Người chịu trách nhiệm chính**
-- **Người phối hợp**
-- **Bối cảnh và đầu vào**
-- **Phạm vi / ngoài phạm vi**
-- **Đầu ra cần bàn giao**
-- **Nguồn và bằng chứng**
-- **Tiêu chí nghiệm thu**
-- **Deadline / mức ưu tiên**
-- **Rủi ro, giả định và câu hỏi cần CEO quyết định**
-
-CEO có thể cập nhật từng ROLE.md khi ngành hàng MVP và cơ cấu thực tế được chốt.
+Giai đoạn hiện tại chạy thủ công để kiểm chứng quy trình. Chưa bật automation.
