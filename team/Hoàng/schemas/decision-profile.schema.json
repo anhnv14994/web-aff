@@ -221,7 +221,18 @@
         "friction_types": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "F1_CHOICE_OVERLOAD",
+              "F2_PRIORITY_UNCERTAINTY",
+              "F3_INFORMATION_GAP",
+              "F4_PERFORMANCE_RISK",
+              "F5_FINANCIAL_RISK",
+              "F6_COMPATIBILITY_FIT_RISK",
+              "F7_TRUST_EVIDENCE_CONFLICT",
+              "F8_REGRET_SOCIAL_UNCERTAINTY",
+              "F9_DECISION_FATIGUE_TIMING_INERTIA"
+            ]
           }
         },
         "asked_question_keys": {
