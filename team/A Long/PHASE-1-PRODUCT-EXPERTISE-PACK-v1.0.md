@@ -3,7 +3,7 @@
 **Người phụ trách:** A Long — Product Expert  
 **Phiên bản:** 1.0  
 **Ngày:** 12/11/2026  
-**Trạng thái:** Preliminary expert screening — chờ CEO xác nhận ứng viên để kiểm chứng sâu  
+**Trạng thái:** Product Expert Pilot selected — monitor category; final MVP decision remains subject to market/data/affiliate validation  
 **Phạm vi:** 5 ngành hàng ứng viên tại Việt Nam; không phải quyết định chọn ngành MVP.
 
 ---
@@ -480,3 +480,97 @@ Mỗi candidate model ghi một dòng:
 **Trách nhiệm chuyên môn:** A Long xác nhận taxonomy, model identity, tiêu chí, diễn giải thông số, suitability và evidence.  
 **Quyền quyết định kinh doanh:** CEO phê duyệt ngành hàng, phạm vi MVP, economics và release.  
 **Nguyên tắc:** Chính xác về sản phẩm, trung thực về giới hạn và giải thích được vì sao sản phẩm phù hợp hoặc không phù hợp.
+
+
+---
+
+## 10. Addendum — Quyết định chọn Product Expert Pilot (12/11/2026)
+
+### 10.1. Quyết định
+
+**A Long chọn MÀN HÌNH MÁY TÍNH làm ngành hàng để triển khai Product Expert Pilot đầu tiên.**
+
+Phạm vi này có nghĩa là xây taxonomy, bộ tiêu chí, exact-model mapping, evidence register và QA trên một tập mẫu giới hạn. Nó **không** có nghĩa A+ đã chốt monitor là ngành MVP để kinh doanh, cũng không chứng minh thị trường/affiliate economics tốt hơn các ngành khác.
+
+### 10.2. Scorecard điều chỉnh theo mức sẵn sàng pilot
+
+Bảng điểm thô ở Mục 2 đo độ thuận lợi chuyên môn. Để chọn pilot, A Long bổ sung khả năng kiểm chứng độc lập, rủi ro claim và khả năng vận hành tại Việt Nam.
+
+| Tiêu chí điều chỉnh | Trọng số |
+|---|---:|
+| Giá trị hỗ trợ quyết định | 15% |
+| Khả năng chuẩn hóa thông số | 20% |
+| Khả năng lập suitability theo use case | 15% |
+| Bằng chứng/kiểm thử độc lập có thể truy xuất | 20% |
+| Độ rõ ràng model/variant | 10% |
+| Điều kiện hỗ trợ, bảo hành và duy trì tại Việt Nam | 10% |
+| Rủi ro claim và khả năng quản trị an toàn | 10% |
+| **Tổng** | **100%** |
+
+| Ngành hàng | Decision | Chuẩn hóa | Suitability | Evidence | Identity | Local ops | Claim risk control | Tổng điều chỉnh |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Màn hình** | 4 | 5 | 5 | 5 | 4 | 4 | 5 | **4,65/5** |
+| Laptop | 5 | 5 | 5 | 4 | 2 | 3 | 5 | 4,30/5 |
+| Máy lọc không khí | 4 | 5 | 5 | 5 | 4 | 3 | 2 | 4,25/5 |
+| Audio | 5 | 3 | 5 | 4 | 4 | 3 | 4 | 4,00/5 |
+| Robot hút bụi | 5 | 3 | 5 | 3 | 3 | 3 | 3 | 3,60/5 |
+
+Điểm là nhận định chuyên gia có cấu trúc, chưa phải thống kê thực nghiệm. Điểm “local ops” là giả định cần xác minh bằng SKU, chính sách bảo hành, tồn kho và dịch vụ tại Việt Nam; không được diễn giải là đã audit xong nhà bán.
+
+### 10.3. Lý do chọn màn hình
+
+1. **Có nhiều phép đo độc lập và quy trình minh bạch.** RTINGS công khai các nhóm đo chất lượng hình ảnh, chuyển động, input lag, kết nối và tính năng. Họ cũng ghi rõ kết quả giữa các phiên bản test bench khác nhau có thể không so sánh trực tiếp; điều này có thể chuyển thành rule cho Evidence Register. Nguồn: https://www.rtings.com/monitor/learn/how-we-test (kiểm tra 12/11/2026).
+2. **Có chứng nhận bên ngoài cho một số claim cụ thể.** VESA nêu rằng chỉ sản phẩm vượt qua chương trình tuân thủ và được đưa vào danh sách chứng nhận mới được dùng logo DisplayHDR/DisplayPort tương ứng. Chứng nhận không thay thế mọi phép đo chất lượng màn hình, nhưng giúp kiểm tra claim HDR. Nguồn: https://compliance.vesa.org/ và https://displayhdr.org/ (kiểm tra 12/11/2026).
+3. **Có SKU chính hãng tại Việt Nam để dựng mẫu.** LG Việt Nam công bố model 27GS85Q-B có QHD 27 inch, 180Hz native và 200Hz ở chế độ ép xung; trang cũng nêu yêu cầu DisplayPort/cáp phù hợp cho chế độ 200Hz. Đây là ví dụ tốt để test việc tách native refresh rate khỏi overclock. Nguồn: https://www.lg.com/vn/man-hinh-may-tinh/man-hinh-gaming-ultragear/27gs85q-b/ (kiểm tra 12/11/2026).
+4. **Đa dạng use case nhưng vẫn có chung data model.** Có thể bao phủ office, productivity/USB-C, design/color và gaming mà vẫn dùng chung identity/spec/evidence schema.
+5. **Rủi ro claim dễ kiểm soát hơn nhóm có hàm ý sức khỏe.** Máy lọc không khí có CADR theo từng loại hạt, và diện tích phòng phụ thuộc các giả định test/ACH/chiều cao trần. Hướng dẫn AHAM hữu ích nhưng không thể áp nguyên xi thành cam kết cho mọi nhà ở Việt Nam. Nguồn: https://ahamverifide.org/ahams-air-filtration-standards/ và https://www.energy.gov/sites/default/files/2023-02/air-cleaners-tp-fr.pdf.
+
+### 10.4. Phạm vi pilot chuyên môn
+
+**Tập mẫu đề xuất:** 12 exact models/SKUs, chia 4 nhóm use case (3 model mỗi nhóm):
+
+- Office / study: đọc văn bản, làm việc nhiều giờ, ergonomics, flicker/clarity, kết nối cơ bản.
+- Productivity / USB-C: docking, USB-C video, power delivery, hub, KVM và tương thích hệ điều hành.
+- Design / color work: gamut, color accuracy, calibration, uniformity, bit depth và điều kiện đo.
+- Gaming: native/OC refresh, response time, overshoot, VRR, input lag, HDR và bandwidth kết nối.
+
+Các trang dưới đây chỉ là **nguồn khởi tạo ứng viên**, không phải xác nhận hàng đang bán, SKU cụ thể hay đánh giá chất lượng độc lập:
+- LG 27GS85Q-B: https://www.lg.com/vn/man-hinh-may-tinh/man-hinh-gaming-ultragear/27gs85q-b/
+- BenQ MA270U: https://www.benq.com/vi-vn/monitor/home/ma270u/spec.html
+- BenQ EW270Q: https://www.benq.com/vi-vn/monitor/home/ew270q/spec.html
+- ASUS ProArt PA278CV: https://www.asus.com/vn/store/displays-desktops/monitors/
+
+Trâm Anh có thể thu thập model codes, P/N, region, manual/spec links, ngày kiểm tra và bằng chứng theo template. A Long sẽ xác nhận identity, diễn giải và suitability. Hoàng chỉ chuyển schema/rules sang code sau khi chuyên gia ký duyệt các trường và quy tắc.
+
+### 10.5. Quy tắc chuyên môn phải kiểm thử trong pilot
+
+- Tách native refresh rate và overclocked refresh rate.
+- Phân biệt GtG, MPRT, response time, refresh rate và input lag; không dùng thay thế cho nhau.
+- So sánh response time chỉ khi test method, overdrive setting và test bench tương thích.
+- Phân biệt HDR signal compatibility, HDR marketing claim và VESA DisplayHDR certification.
+- Tách gamut coverage khỏi color accuracy; “99% sRGB” không đồng nghĩa Delta E thấp.
+- Lưu độ sáng SDR sustained và HDR peak riêng, kèm test window/setting nếu nguồn có.
+- Kiểm tra exact model suffix, region, panel revision, firmware và cổng kết nối.
+- Với USB-C: xác minh DP Alt Mode, PD wattage, data bandwidth và khả năng chạy native resolution/refresh đồng thời.
+- Không suy luận “tốt cho mắt”, “bảo vệ mắt” hoặc “không gây mỏi” chỉ từ tên tính năng; yêu cầu dữ kiện đúng phạm vi.
+- Không dùng điểm gaming để xếp hạng cho nhu cầu thiết kế/văn phòng; suitability phải theo use case.
+
+### 10.6. Điều kiện hoàn thành pilot
+
+1. Có 12 exact model identity records; mọi bản ghi unresolved bị loại khỏi bảng so sánh công khai.
+2. Mỗi tiêu chí quan trọng có định nghĩa, đơn vị, điều kiện so sánh và nguồn.
+3. Mọi claim HDR/refresh/response/color có trạng thái verified, partial hoặc unresolved.
+4. Có ma trận tối thiểu cho 4 use case và danh sách hard constraints / trade-offs.
+5. Chạy đủ các test case model/variant, HDR, refresh, response/lag, color, USB-C và evidence mismatch.
+6. Có báo cáo evidence coverage riêng cho từng model; không bù thiếu bằng suy đoán.
+7. A Long ký duyệt chuyên môn trước khi Hoàng đưa scoring/rules vào prototype.
+
+### 10.7. Điều chưa được quyết định
+
+- Demand/search competition của màn hình tại Việt Nam.
+- Khả năng truy cập catalog và quyền sử dụng dữ liệu từ nhà sản xuất/nhà bán.
+- Affiliate program, deep link, attribution, commission và điều khoản đối tác.
+- Mức giá/segment và nhóm khách hàng đầu tiên.
+- Kinh tế đơn vị và mức độ cạnh tranh với publisher/reviewer hiện có.
+
+Các mục trên nằm ngoài quyền xác nhận chuyên môn của A Long. **Khuyến nghị với CEO:** cho phép dùng màn hình làm pilot kiến thức 12 SKU trong khi kiểm chứng song song demand, data permissions và affiliate feasibility. Chỉ chốt MVP sau khi các cổng đó đạt yêu cầu.
