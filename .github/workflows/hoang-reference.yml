@@ -1,0 +1,31 @@
+name: Hoang reference-engine checks
+
+on:
+  push:
+    paths:
+      - "team/Hoàng/**"
+      - ".github/workflows/hoang-reference.yml"
+  pull_request:
+    paths:
+      - "team/Hoàng/**"
+      - ".github/workflows/hoang-reference.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  reference-engine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run decision engine unit tests
+        working-directory: team/Hoàng/reference
+        run: python -m unittest -v
+      - name: Validate JSON Schema syntax and local references
+        working-directory: team/Hoàng/reference
+        run: python validate_schemas.py
