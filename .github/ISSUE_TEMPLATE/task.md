@@ -2,7 +2,6 @@
 name: A+ Task
 about: CEO giao việc hoặc ghi nhận một đầu việc chính thức
 title: "[TASK] "
-labels: ["status:backlog"]
 assignees: []
 ---
 
